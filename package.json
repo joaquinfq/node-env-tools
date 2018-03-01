@@ -1,0 +1,21 @@
+{
+    "name"        : "node-env-tools",
+    "version"     : "1.0.0",
+    "description" : "Tools for working with process.env.NODE_ENV including check environment.",
+    "repository"  : {
+        "type" : "git",
+        "url"  : "git+https://github.com/joaquinfq/node-env-tools.git"
+    },
+    "keywords"    : [
+        "development",
+        "node-env",
+        "NODE_ENV",
+        "production"
+    ],
+    "author"      : "Joaquín Fernández <public@joaquinfernandez.net>",
+    "license"     : "MIT",
+    "bugs"        : {
+        "url" : "https://github.com/joaquinfq/node-env-tools/issues"
+    },
+    "homepage"    : "https://github.com/joaquinfq/node-env-tools#readme"
+}
