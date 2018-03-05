@@ -22,7 +22,7 @@ module.exports = {
      */
     get(key, defval)
     {
-        return propSep.get(key, defval);
+        return propSep.get(env, key, defval);
     },
     /**
      * Indica si la clave existe.
@@ -33,7 +33,7 @@ module.exports = {
      */
     has(key)
     {
-        return propSep.has(key);
+        return propSep.has(env, key);
     },
     /**
      * Verifica si la propiedad `NODE_ENV` tiene el valor indicado.
@@ -51,18 +51,6 @@ module.exports = {
         return _value && name
             ? _value === name || (quotes && this.isEnv(`"${name}"`))
             : false;
-    },
-    /**
-     * Asigna el objeto como entorno en vez de `process.env`.
-     *
-     * @param {Object} newEnv Objeto a usar como entorno.
-     */
-    load(newEnv)
-    {
-        if (newEnv && typeof newEnv === 'object')
-        {
-            env = newEnv;
-        }
     },
     /**
      * Indica si el entorno es de desarrollo buscando `dev`,
@@ -95,13 +83,25 @@ module.exports = {
         return this.isEnv('test', true) || this.isEnv('testing', true);
     },
     /**
+     * Asigna el objeto como entorno en vez de `process.env`.
+     *
+     * @param {Object} newEnv Objeto a usar como entorno.
+     */
+    load(newEnv)
+    {
+        if (newEnv && typeof newEnv === 'object')
+        {
+            env = newEnv;
+        }
+    },
+    /**
      * Elimina una clave del entorno.
      *
      * @param {String} key Nombre de la clave.
      */
     remove(key)
     {
-        return propSep.remove(key);
+        return propSep.remove(env, key);
     },
     /**
      * Asigna el valor de la clave.
@@ -111,7 +111,7 @@ module.exports = {
      */
     set(key, value)
     {
-        return propSep.set(key, value);
+        return propSep.set(env, key, value);
     }
 };
 
