@@ -1,6 +1,6 @@
 {
     "name"         : "node-env-tools",
-    "version"      : "1.0.0",
+    "version"      : "1.0.1",
     "description"  : "Tools for working with process.env.NODE_ENV including check environment.",
     "repository"   : {
         "type" : "git",
