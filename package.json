@@ -19,7 +19,7 @@
     },
     "homepage": "https://github.com/joaquinfq/node-env-tools#readme",
     "dependencies": {
-        "prop-sep": "^2.1.0"
+        "@jf/prop-sep": "^3.0.0"
     },
     "scripts": {
         "test": "node test.js"
