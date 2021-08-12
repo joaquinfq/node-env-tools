@@ -1,6 +1,6 @@
 {
     "name": "node-env-tools",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "description": "Tools for working with process.env.NODE_ENV including check environment.",
     "repository": {
         "type": "git",
@@ -18,10 +18,10 @@
         "url": "https://github.com/joaquinfq/node-env-tools/issues"
     },
     "homepage": "https://github.com/joaquinfq/node-env-tools#readme",
-    "dependencies": {
-        "prop-sep": "^2.1.0"
-    },
     "scripts": {
         "test": "node test.js"
+    },
+    "dependencies": {
+        "@jf/prop-sep": "^3.0.0"
     }
 }
