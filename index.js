@@ -1,4 +1,4 @@
-const propSep = require('prop-sep');
+const propSep = require('@jf/prop-sep');
 
 /**
  * Valores a usar.
